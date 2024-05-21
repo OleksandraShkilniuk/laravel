@@ -25,12 +25,16 @@
         <td>Status</td>
     </tr
     @foreach($pollTypes as $pollType)
-    <tr>
-        <td>{{$pollType->id}}</td>
-        <td>{{$pollType->name}}</td>
-        <td>{{$pollType->description}}</td>
-        <td>{{$pollType->status}}</td>
-    </tr>
+        <tr>
+            <td>{{$pollType->id}}</td>
+            <td>{{$pollType->name}}</td>
+            <td>{{$pollType->description}}</td>
+            <td>{{$pollType->status}}</td>
+            <td>
+                <a href="{{route('poll-types.edit', ['id'=> $pollType->id,]
+)}}">{{route('poll-types.edit', ['id'=> $pollType->id,])}}
+                </a></td>
+        </tr>
     @endforeach
     </tbody>
 </table>
